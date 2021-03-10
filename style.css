@@ -1,0 +1,37 @@
+body {
+    margin: 0px;
+    background-color: #8854d0;
+    color: #ffff;
+    font-family: 'Roboto', sans-serif;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+h1{
+    font-family: 'Varela Round', sans-serif;
+}
+input[type ='text']{
+    width: 90%;
+    font-size: 16px;
+    padding: 8px;
+    border-radius: 4px;
+    outline: none;
+}
+.btn {
+    font-size: 18px;
+    padding: 8px 22px;
+    color: #ffff;
+    border: 2px solid #ffff;
+    background-color: transparent;
+    border-radius: 4px;
+    transition-duration: 0.4s;
+    outline: none;
+}
+.btn:hover{
+    border: 2px solid #fed330;
+    color: #fed330;
+}

@@ -4,6 +4,16 @@ let saveBtn = document.querySelector('.save');
 let clearBtn = document.querySelector('.clear');
 let ul = document.querySelector('.list');
 
+//add deleting of items
+
+//load local storage after refreshing
+function previousListItem (){
+    if(localStorage.getItem('listItem')){
+        ul.innerHTML=localStorage.getItem('listItem');
+    }
+}
+
+
 
 //li creation function
 input.addEventListener('keypress', function(pressedKey){
@@ -23,3 +33,5 @@ clearBtn.addEventListener('click',function(){
 saveBtn.addEventListener('click', function(){
     localStorage.setItem('listItem',ul.innerHTML)
 })
+
+previousListItem ()
