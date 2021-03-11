@@ -21,6 +21,19 @@ input[type ='text']{
     border-radius: 4px;
     outline: none;
 }
+ul li{
+    display: flex;
+    justify-content: space-between;
+    list-style-type: none;
+    cursor: pointer;
+}
+span{
+    display: none;
+    
+}
+li:hover span{
+    display: block;
+}
 .btn {
     font-size: 18px;
     padding: 8px 22px;
@@ -30,6 +43,7 @@ input[type ='text']{
     border-radius: 4px;
     transition-duration: 0.4s;
     outline: none;
+    cursor: pointer;
 }
 .btn:hover{
     border: 2px solid #fed330;
