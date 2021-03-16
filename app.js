@@ -5,7 +5,7 @@ let input = document.querySelector('input[type="text"]'),
     ul = document.querySelector('.list'),
     spanList = document.getElementsByTagName('span');
 
-//add design
+//add tip icon
 //add scroll inside of div with li elements??
 
 
