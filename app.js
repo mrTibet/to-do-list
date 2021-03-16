@@ -5,7 +5,8 @@ let input = document.querySelector('input[type="text"]'),
     ul = document.querySelector('.list'),
     spanList = document.getElementsByTagName('span');
 
-//add mobile version
+//add design
+//add scroll inside of div with li elements??
 
 
 
