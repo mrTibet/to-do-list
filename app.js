@@ -5,6 +5,18 @@ let input = document.querySelector('input[type="text"]'),
     ul = document.querySelector('.list'),
     spanList = document.getElementsByTagName('span');
 
+//add mobile version
+
+
+
+//delete by icons
+function deleteItem() {
+    for(let span of spanList){
+        span.addEventListener('click', function(){
+            span.parentElement.remove();
+        });
+    }
+}
 
 //load local storage after refreshing
 function previousListItem (){
@@ -14,26 +26,22 @@ function previousListItem (){
     }
 }
 
-//delete function by icons
-function deleteItem() {
-    for(let span of spanList){
-        span.addEventListener('click', function(){
-            span.parentElement.remove();
-        })
-    }
-}
-    
-
-
 
 //li creation function
 input.addEventListener('keypress', function(pressedKey){
     if(pressedKey.which=== 13){
         //li creation after pressing 'enter'
         console.log(this.value)
-        ul.insertAdjacentHTML('afterbegin', `<li>${this.value} <span><i class="far fa-trash-alt"></i></span></li>`);
+
+        let liValue = this.value;
+        this.value = ' ';
+
+    
+        ul.insertAdjacentHTML('afterbegin', `<li>${liValue} <span><i class="far fa-trash-alt"></i></span></li>`);
 
         deleteItem()
+
+        pressedKey.preventDefault();
     }
 })
 
@@ -46,6 +54,13 @@ saveBtn.addEventListener('click', function(){
     localStorage.setItem('listItem',ul.innerHTML)
 })
 
+//linethrough creatin via click to elem
+
+ul.addEventListener('click', function(ev){
+    if(ev.target.tagName==='LI'){
+      ev.target.classList.toggle('linethrough')
+    }
+})
 
 deleteItem ();
 

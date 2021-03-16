@@ -34,6 +34,9 @@ span{
 li:hover span{
     display: block;
 }
+.linethrough{
+    text-decoration: line-through;
+}
 .btn {
     font-size: 18px;
     padding: 8px 22px;
