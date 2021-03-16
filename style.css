@@ -52,15 +52,23 @@ li:hover span{
     transition-duration: 0.4s;
     outline: none;
     cursor: pointer;
+    /*ripple effect*/
+    background-position: center;
+    transition: background 0.8s;
 }
 .btn:hover{
-    border: 2px solid #fed330;
-    color: #fed330;
+    background: #8854d0 radial-gradient(circle, transparent 1%, #8854d0 1%) center/15000%;
 }
+.btn:active{
+    background-color: #a5b1c2;
+    background-size: 100%;
+    transition: background 0s;
+}
+
 
 @media screen and (max-width: 768px){
     .todo{
-        height: 100vh;
+        height: inherit;
         display: flex;
         justify-content: space-between;
         flex-direction: column;
@@ -87,5 +95,9 @@ li:hover span{
     h1 {
         font-weight: bold;
         font-size: 36px;
+    }
+    input[type ='text']{
+        font-size: 18px;
+        padding: 10px;
     }
 }
