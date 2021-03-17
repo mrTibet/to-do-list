@@ -9,8 +9,6 @@ let input = document.querySelector('input[type="text"]'),
 
 //add scroll inside of div with li elements??
 
-
-
 //delete by icons
 function deleteItem() {
     for(let span of spanList){
@@ -74,6 +72,8 @@ overlayTips.addEventListener('click', function(){
 })
 
 
+
 deleteItem ();
 
 previousListItem ();
+

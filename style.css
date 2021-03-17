@@ -26,11 +26,17 @@ input[type ='text']{
     border-radius: 4px;
     outline: none;
 }
+ul {
+    width: 80%;
+}
 ul li{
     display: flex;
     justify-content: space-between;
     list-style-type: none;
     cursor: pointer;
+}
+ul li:nth-child(2n){
+    background-color:#a55eea;
 }
 span{
     display: none;
@@ -68,11 +74,17 @@ li:hover span{
     justify-content: space-between;
 }
 .todo-buttons div{
-    border: 2px solid #ffff;
     padding: 10px 22px;
     border-radius: 4px;
     cursor: pointer;
 }
+.lightbulb {
+    border: 2px solid #f7b731;
+}
+.lightbulb i{
+    color: #f7b731;
+}
+
 /*add overlay tips*/
 .overlay {
     position: fixed;
