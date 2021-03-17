@@ -3,9 +3,10 @@ let input = document.querySelector('input[type="text"]'),
     saveBtn = document.querySelector('.save'),
     clearBtn = document.querySelector('.clear'),
     ul = document.querySelector('.list'),
-    spanList = document.getElementsByTagName('span');
+    spanList = document.getElementsByTagName('span'),
+    lightBulb = document.querySelector('.lightbulb'),
+    overlayTips = document.querySelector('.overlay');
 
-//add tip icon
 //add scroll inside of div with li elements??
 
 
@@ -55,13 +56,23 @@ saveBtn.addEventListener('click', function(){
     localStorage.setItem('listItem',ul.innerHTML)
 })
 
-//linethrough creatin via click to elem
+//linethrough creation via click to elem
 
 ul.addEventListener('click', function(ev){
     if(ev.target.tagName==='LI'){
       ev.target.classList.toggle('linethrough')
     }
 })
+
+//overlay tips
+lightBulb.addEventListener('click', function(){
+    overlayTips.style.display = 'block';
+});
+
+overlayTips.addEventListener('click', function(){
+    overlayTips.style.display = 'none';
+})
+
 
 deleteItem ();
 

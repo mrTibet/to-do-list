@@ -34,7 +34,6 @@ ul li{
 }
 span{
     display: none;
-    
 }
 li:hover span{
     display: block;
@@ -64,6 +63,38 @@ li:hover span{
     background-size: 100%;
     transition: background 0s;
 }
+.todo-buttons{
+    display: flex;
+    justify-content: space-between;
+}
+.todo-buttons div{
+    border: 2px solid #ffff;
+    padding: 10px 22px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+/*add overlay tips*/
+.overlay {
+    position: fixed;
+    display: none;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 2;
+    cursor: pointer;
+}
+.overlay-tips {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+}
 
 
 @media screen and (max-width: 768px){
@@ -79,8 +110,6 @@ li:hover span{
         font-size: 56px;
     }
     .todo-buttons{
-        display: flex;
-        justify-content: space-between;
         margin-bottom: 20px;
     }
     .btn {
