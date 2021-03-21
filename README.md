@@ -1,2 +1,2 @@
 # to-do-list
-### Simple To-Do List. Create with vanilla JS.
+### Simple To-Do List. Created with vanilla JS.
